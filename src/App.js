@@ -42,7 +42,7 @@ function App() {
                   <div style={{
                       position : 'relative'
                   }}>
-                    <img src='/logo-verihoax.png' style={{width: '140px'}}/>
+                    <img src={process.env.PUBLIC_URL + '/logo-verihoax.png'} style={{width: '140px'}}/>
                     <span style={{
                         position: 'absolute',
                         bottom: '12px',
