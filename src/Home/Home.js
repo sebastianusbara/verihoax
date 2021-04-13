@@ -1,10 +1,11 @@
-import logo from './logo.svg';
+import logo from '../logo.svg';
 import {
     Button, Input, Jumbotron, InputGroup, Card, CardImg, CardBody, CardTitle, CardSubtitle, CardText,
     Navbar, Nav, NavItem
 } from 'reactstrap';
 import { useMediaQuery } from 'react-responsive';
 import 'bootstrap/dist/css/bootstrap.min.css';
+import { Link } from 'react-router-dom';
 
 const navItem = {
     padding: '12px',
@@ -32,7 +33,7 @@ const Navigation = (
     </div>
 );
 
-function App() {
+function Home() {
   const isMobile = useMediaQuery({ query: '(max-width: 768px)' });
   const contentPadding = isMobile ? '0' : '32px 128px';
 
@@ -43,7 +44,7 @@ function App() {
                   <div style={{
                       position : 'relative'
                   }}>
-                    <img src={'%PUBLIC_URL%/logo-verihoax.png'} style={{width: '140px'}}/>
+                    <img src={'/logo-verihoax.png'} style={{width: '140px'}}/>
                     <span style={{
                         position: 'absolute',
                         bottom: '12px',
@@ -67,19 +68,23 @@ function App() {
                   </div>
                   <InputGroup size="md">
                       <Input type="textarea" rows="7" name="text" style={{
-                          borderRadius: '21px',
+                          borderRadius: '4px',
                           padding: '12px'
                       }}/>
                   </InputGroup>
-                  <Button color="primary" style={{
-                      fontSize: isMobile ? '18px' : '21px',
-                      marginTop: '21px',
-                      padding: '12px 42px',
-                      fontWeight: 500,
-                      width: isMobile ? '100%' : 'auto'
-                  }}>
-                      Damai Sentosa
-                  </Button>
+                  <Link to="/result"
+                        style={{
+                            display: 'inline-block',
+                            background: '#007bff',
+                            color: 'white',
+                          fontSize: isMobile ? '18px' : '21px',
+                          marginTop: '21px',
+                          padding: '12px 42px',
+                          fontWeight: 500,
+                          width: isMobile ? '100%' : 'auto',
+                            borderRadius: '4px'
+                      }}>Verifikasi Sumber Berita
+                  </Link>
               </div>
           </Jumbotron>
           {!isMobile && Navigation}
@@ -87,4 +92,4 @@ function App() {
   );
 }
 
-export default App;
+export default Home;
