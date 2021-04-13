@@ -4,6 +4,7 @@ import {
     Navbar, Nav, NavItem
 } from 'reactstrap';
 import { useMediaQuery } from 'react-responsive';
+import 'bootstrap/dist/css/bootstrap.min.css';
 
 const navItem = {
     padding: '12px',
