@@ -21,7 +21,7 @@ function News(props) {
             marginBottom: '12px'
         }}>
             <CardImg src={props.logo} alt="Card image cap" style={{
-                width: '240px',
+                width: '160px',
                 margin: '0 auto',
                 paddingTop: '24px',
                 maxHeight: '80px',

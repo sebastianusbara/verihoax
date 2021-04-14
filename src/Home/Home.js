@@ -72,7 +72,7 @@ function Home() {
                           padding: '12px'
                       }}/>
                   </InputGroup>
-                  <Link to="/result"
+                  <Link to="/result?isSafe=true"
                         style={{
                             display: 'inline-block',
                             background: '#007bff',
